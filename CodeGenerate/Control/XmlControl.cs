@@ -32,6 +32,7 @@ namespace CodeGenerate.Control
         /// <returns></returns>
         public static DataSet ReadXmlDs()
         {
+
             var ds = new DataSet();
             ds.ReadXml(xmlPath);
             return ds;
@@ -54,7 +55,11 @@ namespace CodeGenerate.Control
             return dic;
         }
 
-
+        /// <summary>
+        /// WriteXml
+        /// </summary>
+        /// <param name="dgvTables"></param>
+        /// <param name="dgvColumns"></param>
         public static void WriteXml(DataGridView dgvTables, DataGridView dgvColumns)
         {
             DataSet dsxml = ReadXmlDs();
